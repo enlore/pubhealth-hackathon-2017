@@ -1,20 +1,140 @@
-.content {
-  margin-left: 128px; }
+html, body {
+  font-family: 'Open Sans', 'Helvetica', sans-serif; }
 
-.nav-link {
-  display: block; }
+h1, h2, h3 {
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0; }
 
-header, footer, section {
-  max-width: 800px; }
+h1 {
+  font-size: 68px; }
 
-section {
+h2 {
+  font-size: 35px; }
+
+h3 {
+  font-size: 30px; }
+
+p, span, li, a {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0; }
+
+p.lg,
+span.lg,
+li.lg,
+a.lg {
+  font-size: 26px; }
+
+p {
+  margin-top: 1.6em; }
+
+.title {
+  margin-top: 2em;
+  margin-bottom: 1em; }
+
+th, td {
+  font-size: 30px; }
+
+.tableish .row {
+  margin-top: 96px;
+  margin-bottom: 96px; }
+
+header {
+  background-image: url("/img/tn-state-capitol-building.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  position: relative; }
+  header nav {
+    position: absolute;
+    right: 128px; }
+  header nav a {
+    display: inline-block;
+    margin-left: 16px;
+    color: #232323;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 180ms ease; }
+  header nav a:hover {
+    border-color: #B8E986; }
+  header nav a:first-child {
+    margin-left: 0; }
+  header .headline {
+    margin-top: 256px;
+    color: #fff; }
+  header .intro {
+    font-size: 30px; }
+  header .logos {
+    position: absolute;
+    bottom: 32px;
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden; }
+  header .logo-metro {
+    position: absolute;
+    right: 128px;
+    bottom: 68px; }
+  header .logo-c4n {
+    position: absolute;
+    left: 128px;
+    bottom: 68px; }
+
+header, section {
   padding-top: 64px;
   padding-bottom: 64px; }
 
-.addressGroup p {
+.dark {
+  background-color: #232323;
+  color: #fff; }
+
+.bright {
+  background-color: #B8E986;
+  color: #232323; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  cursor: pointer; }
+
+.btn--lg {
+  font-size: 30px;
+  padding: 16px 24px;
+  border-radius: 18px; }
+
+.btn--dark {
+  background-color: #232323;
+  color: #fff; }
+
+.btn--dark:active,
+.btn--dark:hover {
+  background-color: #fff;
+  color: #232323; }
+
+.btn--bright {
+  color: #B8E986;
+  background-color: #232323;
+  border: 2px solid transparent;
+  text-shadow: none;
+  transition: border-color 180ms ease; }
+
+.btn--bright:active,
+.btn--bright:hover {
+  border-color: #B8E986; }
+
+.logos {
+  margin-top: 128px; }
+
+.addressGroup h1 {
   margin: 0; }
 
 .map {
+  margin-top: 32px;
   position: relative; }
 
 .map iframe {
@@ -31,6 +151,9 @@ section {
 table {
   width: 100%; }
 
+td {
+  padding-top: 8px; }
+
 th {
   text-align: left; }
 
@@ -45,3 +168,19 @@ th {
 
 .u-bump.u-bump {
   margin-top: 64px; }
+
+.u-cf:after {
+  content: " ";
+  clear: both;
+  display: table; }
+
+.u-floatRight {
+  float: right; }
+
+.u-floatLeft {
+  float: left; }
+
+.u-centerBlock {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }

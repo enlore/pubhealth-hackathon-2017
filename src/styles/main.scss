@@ -1,32 +1,143 @@
-$black: #000;
+$black: #1d1d1d;
 $white: #fff;
-$grey: #222;
+$grey: #232323;
+$lightGrey: #D8D8D8;
+
+$green: #B8E986;
 
 @import '_typography.scss';
 
-.content {
-  margin-left: 128px;
+.tableish .row {
+    margin-top: 96px;
+    margin-bottom: 96px;
 }
 
-.nav-link {
-  display: block;
+header {
+    background-image: url('/img/tn-state-capitol-building.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    position: relative;
+
+    nav {
+        position: absolute;
+        right: 128px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-left: 16px;
+        color: $grey;
+        padding-bottom: 8px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 180ms ease;
+    }
+
+    nav a:hover {
+        border-color: $green;
+    }
+
+    nav a:first-child {
+        margin-left: 0;
+    }
+
+    .headline {
+        margin-top: 256px;
+        color: $white;
+    }
+
+    .intro {
+        font-size: 30px;
+    }
+
+    .logos {
+       position: absolute;
+       bottom: 32px;
+       max-width: 1200px;
+       width: 100%;
+       overflow: hidden;
+    }
+    .logo-metro {
+        position: absolute;
+        right: 128px;
+        bottom: 68px;
+    }
+
+    .logo-c4n {
+        position: absolute;
+        left: 128px;
+        bottom: 68px;
+    }
 }
 
-header, footer, section {
-  max-width: 800px;
-}
-
-section {
+header, section {
   padding-top: 64px;
   padding-bottom: 64px;
 }
 
-.addressGroup p {
+.dark {
+    background-color: $grey;
+    color: $white;
+}
+
+.bright {
+    background-color: $green;
+    color: $grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.btn--lg {
+    font-size: 30px;
+    padding: 16px 24px;
+    border-radius: 18px;
+}
+
+.btn--dark {
+    background-color: $grey;
+    color: $white;
+}
+
+.btn--dark:active,
+.btn--dark:hover {
+    background-color: $white;
+    color: $grey;
+}
+
+.btn--bright {
+    color: $green;
+    background-color: $grey;
+    border: 2px solid transparent;
+    text-shadow: none;
+    transition: border-color 180ms ease;
+}
+
+.btn--bright:active,
+.btn--bright:hover {
+    border-color: $green;
+}
+
+.logos {
+    margin-top: 128px;
+}
+
+.addressGroup h1 {
   margin: 0;
 }
 
 .map {
-  position: relative;
+    margin-top: 32px;
+    position: relative;
 }
 
 .map iframe {
@@ -44,6 +155,10 @@ section {
 
 table {
   width: 100%;
+}
+
+td {
+    padding-top: 8px;
 }
 
 th {
@@ -64,4 +179,24 @@ th {
 
 .u-bump.u-bump {
   margin-top: 64px;
+}
+
+.u-cf:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.u-floatRight {
+    float: right;
+}
+
+.u-floatLeft {
+    float: left;
+}
+
+.u-centerBlock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

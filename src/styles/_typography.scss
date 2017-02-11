@@ -1,11 +1,39 @@
-h1, h2, h3 {
-
+html, body {
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
 }
 
-h1 {}
-h2 {}
-h3 {}
+h1, h2, h3 {
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 { font-size: 68px; }
+h2 { font-size: 35px; }
+h3 { font-size: 30px; }
 
 p,span,li,a {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+}
 
+p.lg,
+span.lg,
+li.lg,
+a.lg {
+  font-size: 26px;
+}
+
+p {
+  margin-top: 1.6em;
+}
+
+.title {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+th, td {
+  font-size: 30px;
 }
