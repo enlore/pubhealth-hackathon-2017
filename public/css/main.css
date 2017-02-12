@@ -3,7 +3,7 @@ html, body {
 
 h1, h2, h3 {
   font-weight: normal;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 0; }
 
 h1 {
@@ -15,10 +15,13 @@ h2 {
 h3 {
   font-size: 30px; }
 
-p, span, li, a {
+p, span, li {
   font-size: 18px;
   line-height: 1.2;
   margin: 0; }
+
+a {
+  font-size: inherit; }
 
 p.lg,
 span.lg,
@@ -80,9 +83,30 @@ header {
     left: 128px;
     bottom: 68px; }
 
+a {
+  transition: border-color 180ms ease, background-image 180ms ease;
+  text-decoration: none; }
+
+a:active,
+a:hover {
+  border-color: #B8E986; }
+
+.squig:active,
+.squig:hover {
+  border-bottom: none;
+  /* stole (with much love) from The Outline (https://theoutline.com) */
+  background-image: url("data:image/svg+xml;charset=utf8,<svg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'><style type='text/css'>.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}</style><path fill='none' stroke='%23B8E986' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/></svg>");
+  background-position: 0px calc(100% - 1.5px);
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  padding-bottom: 6px; }
+
 header, section {
   padding-top: 64px;
   padding-bottom: 64px; }
+
+footer {
+  padding-bottom: 96px; }
 
 .dark {
   background-color: #232323;
@@ -184,3 +208,6 @@ th {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.u-bold {
+  font-weight: bold; }
