@@ -5,6 +5,10 @@ $lightGrey: #D8D8D8;
 
 $green: #B8E986;
 
+//.bright {
+  //color: $green;
+//}
+
 @import '_typography.scss';
 
 .tableish .row {
@@ -16,58 +20,114 @@ header {
     background-image: url('/img/tn-state-capitol-building.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
     position: relative;
+    padding-top: 0;
+    padding-bottom: 32px;
 
-    nav {
-        position: absolute;
-        right: 128px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin-left: 16px;
-        color: $grey;
-        padding-bottom: 8px;
-        border-bottom: 2px solid transparent;
-        transition: border-color 180ms ease;
-    }
-
-    nav a:hover {
-        border-color: $green;
-    }
-
-    nav a:first-child {
-        margin-left: 0;
+    @media (min-width: 768px) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      min-height: 900px;
     }
 
     .headline {
+      color: $white;
+      margin-top: 32px;
+
+      @media (min-width: 768px) {
         margin-top: 256px;
-        color: $white;
+      }
     }
 
     .intro {
+      font-size: 22px;
+
+      @media (min-width: 768px) {
         font-size: 30px;
+      }
     }
 
     .logos {
-       position: absolute;
-       bottom: 32px;
-       max-width: 1200px;
-       width: 100%;
-       overflow: hidden;
-    }
-    .logo-metro {
+      @media (min-width: 768px) {
         position: absolute;
-        right: 128px;
-        bottom: 68px;
+        bottom: 32px;
+        max-width: 1200px;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    .logo-metro {
+      display: block;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        margin: none;
+        float: left;
+      }
     }
 
     .logo-c4n {
-        position: absolute;
-        left: 128px;
-        bottom: 68px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 16px;
+
+      @media (min-width: 768px) {
+        margin: none;
+        float: right;
+      }
     }
+}
+
+.img-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+nav .nav-member {
+  display: block;
+  padding: 8px 0;
+  width: 50%;
+  float: left;
+}
+
+nav .nav-member:nth-child(2n) {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  nav {
+      margin-bottom: 0;
+      padding-left: 0;
+      position: absolute;
+      right: 128px;
+  }
+
+  nav a {
+      display: inline-block;
+      margin-left: 16px;
+      padding-bottom: 8px;
+  }
+}
+nav a {
+    color: $grey;
+    border-bottom: 2px solid transparent;
+    transition: border-color 180ms ease;
+}
+
+nav a:hover {
+    border-color: $green;
+}
+
+nav a:first-child {
+    margin-left: 0;
 }
 
 a {
@@ -92,7 +152,7 @@ a:hover {
   padding-bottom: 6px;
 }
 
-header, section {
+section {
   padding-top: 64px;
   padding-bottom: 64px;
 }
@@ -101,12 +161,20 @@ footer {
   padding-bottom: 96px;
 }
 
-.dark {
+a.bright {
+  color: $green;
+}
+
+a {
+  color: $grey;
+}
+
+section.dark {
     background-color: $grey;
     color: $white;
 }
 
-.bright {
+section.bright {
     background-color: $green;
     color: $grey;
 }
@@ -229,4 +297,9 @@ th {
 
 .u-bold {
   font-weight: bold;
+}
+
+.u-imgResp {
+  display: block;
+  max-width: 100%;
 }

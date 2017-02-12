@@ -11,29 +11,29 @@ block body
 
   header
     nav.nav
-      a.nav-link(href="#location") Location
-      a.nav-link(href="#about") About
-      a.nav-link(href="#submissions") Submissions
-      a.nav-link(href="#faq") FAQ
-      a.nav-link(href="#coc") Code of Conduct
-      a.nav-button.btn.btn--bright(href="https://www.eventbrite.com/e/storytelling-with-government-data-a-public-health-hackathon-tickets-31591056701", target="_blank").
-        Register here
+      a.nav-member(href="#location") Location
+      a.nav-member(href="#about") About
+      a.nav-member(href="#submissions") Submissions
+      a.nav-member(href="#faq") FAQ
+      a.nav-member(href="#coc") Code of Conduct
+      .nav-member
+        a.btn.btn--bright(href="https://www.eventbrite.com/e/storytelling-with-government-data-a-public-health-hackathon-tickets-31591056701", target="_blank").
+          Register here
 
     .container
-      img.img-resp.img-logo(src="/img/hackathon-logo.png")
+      img.img-logo.u-imgResp(src="/img/hackathon-logo.png")
 
       .headline.u-textCenter
         h1 Storytelling with Government Data
         h2 A Public Health Hackathon
 
         p.intro.
-          By Code for Nashville in partnership with the Government of Metro
-          Nashville and National Community Mapping Center at Meharry Medical
-          College.
+          By Code for Nashville in partnership with Metro Nashville and the
+          National Community Mapping Center at Meharry Medical College.
 
       .u-cf.logos()
-        img.img-resp.u-floatLeft(src="/img/metro-its-logo.png")
-        img.img-resp.u-floatRight(src="/img/c4n-logo.png")
+        img.logo-metro.u-imgResp(src="/img/metro-its-logo.png")
+        img.logo-c4n.u-imgResp(src="/img/c4n-logo.png")
 
   section.tableish
     .container
@@ -71,7 +71,7 @@ block body
 
       .row
         .three.columns
-          p I've never heard of Mappler.
+          p I've never heard of Mappler
 
         .nine.columns
           h2 Preliminary Workshops
@@ -153,7 +153,7 @@ block body
           p <blurb about mappler>
 
           h3 Safe Routes to Schools
-          p http://www.immappler.com/srtsnashville/
+          p #[a.squig.bright(target="_blank", href="http://www.immappler.com/srtsnashville/") Check out the live app]
           p img of map interface
           p blurb about project
 
@@ -176,7 +176,7 @@ block body
             designers hack it up and turn it into a powerful interactive tool or
             visualization?
 
-          p Email us at #[a(href="mailto:info@codefornashville.org?subject=Public Health Dataset") info@codefornashville.org ]
+          p Email us at #[a.squig.u-bold(href="mailto:info@codefornashville.org?subject=Public Health Dataset") info@codefornashville.org ]
 
           h2.title Submit a Project Idea
           p.
@@ -192,7 +192,7 @@ block body
             volunteer, not for profit projects that are motivated by the desire to
             improve Metro Nashville’s ability to serve its residents.
 
-          p Email us at #[a(href="mailto:info@codefornashville.org?subject=Public Health Project") info@codefornashaville.org ]
+          p Email us at #[a.squig.u-bold(href="mailto:info@codefornashville.org?subject=Public Health Project") info@codefornashaville.org ]
 
   section#faq
     .container
@@ -245,7 +245,9 @@ block body
   section#register-cta.bright
     .container
       h2.u-textCenter.
-        Any questions? Email #[a(href="mailto:info@codefornashville.org?subject=General Question") info@codefornashville.org ].
+        Any questions?
+
+      p.u-textCenter.lg.u-bold #[a.squig(href="mailto:info@codefornashville.org?subject=General Question") Email us. ]
 
       .button-wrap.u-textCenter(style="margin-top: 96px;")
         a.btn.btn--dark.btn--lg(style="", href="https://www.eventbrite.com/e/storytelling-with-government-data-a-public-health-hackathon-tickets-31591056701", target="_blank").
@@ -259,4 +261,6 @@ block body
       p.lg #[a.squig(target="_blank", href="http://home.mmc.edu/") Meharry ]
       p.lg #[a.squig(target="_blank", href="http://www.nashville.gov/Information-Technology-Services.aspx") Nashville ITS ]
       p.lg #[a.squig(target="_blank", href="https://data.nashville.gov") The Nashville Open Data Portal ]
-      p.lg #[a.squig(target="_blank", href="http://www.nashville.gov/Government/Open-Data.aspx") Metro’s Nashville.gov Open Data Page]
+
+      h2.title More About All This
+      p.lg #[a.squig(target="_blank", href="http://www.nashville.gov/Government/Open-Data.aspx") About the Open Data Portal]

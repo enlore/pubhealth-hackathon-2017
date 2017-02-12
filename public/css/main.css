@@ -7,13 +7,21 @@ h1, h2, h3 {
   margin: 0; }
 
 h1 {
-  font-size: 68px; }
+  font-size: 48px; }
 
 h2 {
-  font-size: 35px; }
+  font-size: 30px; }
 
 h3 {
-  font-size: 30px; }
+  font-size: 24px; }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 68px; }
+  h2 {
+    font-size: 36px; }
+  h3 {
+    font-size: 30px; } }
 
 p, span, li {
   font-size: 18px;
@@ -37,7 +45,12 @@ p {
   margin-bottom: 1em; }
 
 th, td {
-  font-size: 30px; }
+  font-size: 18px;
+  line-height: 1.2; }
+
+@media (min-width: 768px) {
+  th, td {
+    font-size: 30px; } }
 
 .tableish .row {
   margin-top: 96px;
@@ -47,41 +60,88 @@ header {
   background-image: url("/img/tn-state-capitol-building.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 900px;
-  position: relative; }
-  header nav {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 32px; }
+  @media (min-width: 768px) {
+    header {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      min-height: 900px; } }
+  header .headline {
+    color: #fff;
+    margin-top: 32px; }
+    @media (min-width: 768px) {
+      header .headline {
+        margin-top: 256px; } }
+  header .intro {
+    font-size: 22px; }
+    @media (min-width: 768px) {
+      header .intro {
+        font-size: 30px; } }
+  @media (min-width: 768px) {
+    header .logos {
+      position: absolute;
+      bottom: 32px;
+      max-width: 1200px;
+      width: 100%;
+      overflow: hidden; } }
+  header .logo-metro {
+    display: block;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      header .logo-metro {
+        margin: none;
+        float: left; } }
+  header .logo-c4n {
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px; }
+    @media (min-width: 768px) {
+      header .logo-c4n {
+        margin: none;
+        float: right; } }
+
+.img-logo {
+  display: block;
+  margin: 0 auto; }
+
+nav {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 32px;
+  overflow: hidden; }
+
+nav .nav-member {
+  display: block;
+  padding: 8px 0;
+  width: 50%;
+  float: left; }
+
+nav .nav-member:nth-child(2n) {
+  text-align: right; }
+
+@media (min-width: 768px) {
+  nav {
+    margin-bottom: 0;
+    padding-left: 0;
     position: absolute;
     right: 128px; }
-  header nav a {
+  nav a {
     display: inline-block;
     margin-left: 16px;
-    color: #232323;
-    padding-bottom: 8px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 180ms ease; }
-  header nav a:hover {
-    border-color: #B8E986; }
-  header nav a:first-child {
-    margin-left: 0; }
-  header .headline {
-    margin-top: 256px;
-    color: #fff; }
-  header .intro {
-    font-size: 30px; }
-  header .logos {
-    position: absolute;
-    bottom: 32px;
-    max-width: 1200px;
-    width: 100%;
-    overflow: hidden; }
-  header .logo-metro {
-    position: absolute;
-    right: 128px;
-    bottom: 68px; }
-  header .logo-c4n {
-    position: absolute;
-    left: 128px;
-    bottom: 68px; }
+    padding-bottom: 8px; } }
+
+nav a {
+  color: #232323;
+  border-bottom: 2px solid transparent;
+  transition: border-color 180ms ease; }
+
+nav a:hover {
+  border-color: #B8E986; }
+
+nav a:first-child {
+  margin-left: 0; }
 
 a {
   transition: border-color 180ms ease, background-image 180ms ease;
@@ -101,18 +161,24 @@ a:hover {
   background-repeat: repeat-x;
   padding-bottom: 6px; }
 
-header, section {
+section {
   padding-top: 64px;
   padding-bottom: 64px; }
 
 footer {
   padding-bottom: 96px; }
 
-.dark {
+a.bright {
+  color: #B8E986; }
+
+a {
+  color: #232323; }
+
+section.dark {
   background-color: #232323;
   color: #fff; }
 
-.bright {
+section.bright {
   background-color: #B8E986;
   color: #232323; }
 
@@ -211,3 +277,7 @@ th {
 
 .u-bold {
   font-weight: bold; }
+
+.u-imgResp {
+  display: block;
+  max-width: 100%; }
