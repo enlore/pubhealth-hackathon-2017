@@ -15,7 +15,7 @@ h2 {
 h3 {
   font-size: 24px; }
 
-@media (min-width: 768px) {
+@media (min-width: 1062px) {
   h1 {
     font-size: 68px; }
   h2 {
@@ -62,8 +62,9 @@ header {
   background-size: cover;
   position: relative;
   padding-top: 0;
-  padding-bottom: 32px; }
-  @media (min-width: 768px) {
+  padding-bottom: 32px;
+  background-position: center 0; }
+  @media (min-width: 1062px) {
     header {
       padding-top: 64px;
       padding-bottom: 64px;
@@ -71,25 +72,33 @@ header {
   header .headline {
     color: #fff;
     margin-top: 32px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1062px) {
       header .headline {
-        margin-top: 256px; } }
+        margin-top: 128px; } }
   header .intro {
     font-size: 22px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1062px) {
       header .intro {
         font-size: 30px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 1062px) {
     header .logos {
+      display: block;
       position: absolute;
       bottom: 32px;
-      max-width: 1200px;
+      max-width: 900px;
       width: 100%;
-      overflow: hidden; } }
+      overflow: hidden;
+      left: 50%;
+      transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-left: auto;
+      margin-right: auto; } }
   header .logo-metro {
     display: block;
     margin: 0 auto; }
-    @media (min-width: 768px) {
+    @media (min-width: 1062px) {
       header .logo-metro {
         margin: none;
         float: left; } }
@@ -97,7 +106,7 @@ header {
     display: block;
     margin: 0 auto;
     margin-top: 16px; }
-    @media (min-width: 768px) {
+    @media (min-width: 1062px) {
       header .logo-c4n {
         margin: none;
         float: right; } }
@@ -105,6 +114,11 @@ header {
 .img-logo {
   display: block;
   margin: 0 auto; }
+
+@media (min-width: 1062px) {
+  .img-logo {
+    display: block;
+    margin: 0; } }
 
 nav {
   padding-left: 16px;
@@ -121,16 +135,20 @@ nav .nav-member {
 nav .nav-member:nth-child(2n) {
   text-align: right; }
 
-@media (min-width: 768px) {
+@media (min-width: 1062px) {
   nav {
     margin-bottom: 0;
     padding-left: 0;
+    padding-right: 0;
     position: absolute;
     right: 128px; }
-  nav a {
+  nav .nav-member {
     display: inline-block;
     margin-left: 16px;
-    padding-bottom: 8px; } }
+    padding: 0;
+    padding-bottom: 8px;
+    float: none;
+    width: auto; } }
 
 nav a {
   color: #232323;
