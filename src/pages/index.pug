@@ -28,8 +28,8 @@ block body
         h2 A Public Health Hackathon
 
         p.intro.
-          By Code for Nashville in partnership with Metro Nashville and the
-          National Community Mapping Center at Meharry Medical College.
+          By Code for Nashville in partnership with Metro Nashville and The
+          National Community Mapping Institute @ Meharry
 
       .u-cf.logos()
         img.logo-metro.u-imgResp(src="/img/metro-its-logo.png")
@@ -84,7 +84,7 @@ block body
             tr
               td March 4th
               td 4:00 to 6:30pm
-              td Location TBA
+              td @ the NSS
               td
                 a(href="https://www.eventbrite.com/e/public-health-hackathon-training-workshop-tickets-31591067734", target="_blank")
                   button.btn.btn--table.btn--bright Register here
@@ -92,7 +92,7 @@ block body
             tr
               td March 15th
               td 5:30 to 8:00pm
-              td Location TBA
+              td @ the NSS
               td
                 a(href="https://www.eventbrite.com/e/public-health-hackathon-training-workshop-tickets-31591076761", target="_blank")
                   button.btn.btn--table.btn--bright Register here
@@ -106,8 +106,10 @@ block body
         .nine.columns
           h2.
             We’ll have 12 hours to dig into a set of compelling data sets provided by
-            Metro and the community at large. Create interactive maps and visualizations,
-            and help tell the story of important issues in our city.
+            Metro and the community at large. We will create interactive maps,
+            visualizations with community engagement enabling citizens to
+            contribute data important to their environment and helpful to Metro
+            Nashville and Public Health.
 
   section#schedule.dark
     .container
@@ -150,17 +152,39 @@ block body
           p About Mappler
 
         .nine.columns
-          p <blurb about mappler>
+          p.
+            #[a.squig.bright(href="http://www.mappler.net", target="_blank") Mappler] is an
+            online/offline mapping platform which is developed by Dr. Im to
+            provide the best utilities for community mapping.   Mappler enables
+            Communities to bring environmental and public health data into
+            online mapping. This allows citizen to understand their community
+            issues better and additional data can be added/updated by community
+            participants, through the web, mobile web, and smartphone app.  It
+            also provides REST API, where developers can customize the app.
+            Mappler will be provided to each participant at the “Hackathon”
+            with site admin user id, password and API codes.   Mappler is
+            a proprietary platform, and currently is looking for funding to
+            make it available to communities to use without cost. Currently the
+            site is only available at the Hackathon for participant user
+            only.
 
-          h3 Safe Routes to Schools
-          p #[a.squig.bright(target="_blank", href="http://www.immappler.com/srtsnashville/") Check out the live app]
-          p img of map interface
-          p blurb about project
+          mixin appLink(href, text)
+            p #[a.squig.bright(target="_blank", href=href)= text || 'Check out the live app']
 
-          h3.title Zika Mosquito Breeding Sites
-          p link to project
-          p img of map interface
-          p blurb about project
+          h3.title Safe Routes to Schools
+          //p #[a.squig.bright(target="_blank", href="http://www.immappler.com/srtsnashville/") Check out the live app]
+          +appLink("http://www.immappler.com/srtsnashville/")
+
+          h3.title BioBlitz
+          +appLink("http://www.mappler.info/bioblitz", 'Portal site including links to maps')
+
+          //h3.title Zika Mosquito Breeding Sites
+
+          h3.title NY Restrooms
+          +appLink("http://www.nyrestroom.com")
+
+          h3.title Hurricane Sandy Gas Station Mapping
+          +appLink("https://energy.gov/articles/students-innovate-address-gas-shortages-following-hurricane-sandy", 'Article on Energy.gov')
 
   section#submissions
     .container
@@ -232,7 +256,7 @@ block body
 
           p Read our #[a.squig.u-bold(target="_blank", href="https://hackcodeofconduct.org/411-storytelling_with_government_data") Code of Conduct here ].
 
-  section#sponsors
+  //section#sponsors
     .container
       .row
         .three.columns
@@ -257,10 +281,9 @@ block body
     .container
       h2.title Brought to You By
       p.lg #[a.squig(target="_blank", href="http://www.codefornashville.org/") Code for Nasvhille ]
-      p.lg #[a.squig(target="_blank", href="http://www.mappler.net/") Mappler ]
-      p.lg #[a.squig(target="_blank", href="http://home.mmc.edu/") Meharry ]
+      p.lg #[a.squig(target="_blank", href="http://www.communitiymapipngforhealthequity.org") National Community Mapping Institute at Meharry ]
       p.lg #[a.squig(target="_blank", href="http://www.nashville.gov/Information-Technology-Services.aspx") Nashville ITS ]
-      p.lg #[a.squig(target="_blank", href="https://data.nashville.gov") The Nashville Open Data Portal ]
 
       h2.title More About All This
+      p.lg #[a.squig(target="_blank", href="https://data.nashville.gov") The Nashville Open Data Portal ]
       p.lg #[a.squig(target="_blank", href="http://www.nashville.gov/Government/Open-Data.aspx") About the Open Data Portal]
