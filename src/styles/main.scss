@@ -50,26 +50,30 @@ header {
     }
 
     .logos {
-      @media (min-width: 1062px) {
+      .logo img {
         display: block;
-        position: absolute;
-        bottom: 32px;
-        max-width: 900px;
-        width: 100%;
-        overflow: hidden;
-
-        left: 50%;
-        transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-
-        padding-left: 16px;
-        padding-right: 16px;
-
+        margin-top: 16px;
         margin-left: auto;
         margin-right: auto;
       }
+
+      @media (min-width: 1062px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo img {
+          margin: 0;
+        }
+
+        .logo {
+          display: block;
+          flex: 0 0 auto;
+        }
+      }
     }
 
+    /*
     .logo-metro {
       display: block;
       margin: 0 auto;
@@ -90,6 +94,7 @@ header {
         float: right;
       }
     }
+    */
 }
 
 .img-logo {
